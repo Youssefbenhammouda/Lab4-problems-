@@ -11,6 +11,8 @@ public class IntegerListTest
 //-------------------------------------------------------
     public static void main(String[] args)
     {
+
+
         printMenu();
         int choice = scan.nextInt();
         while (choice != 0)
@@ -40,6 +42,23 @@ public class IntegerListTest
             case 2:
                 list.print();
                 break;
+            case 3:
+                System.out.print("What is the value you want to add: ");
+                int value = scan.nextInt();
+                list.addElement(value);
+                System.out.println("\nElement added! Current Size is " + list.getSize() + " and capacity is " + list.getCapacity() );
+                break;
+
+            case 4:
+                System.out.print("What is the value you want to remove: ");
+                int valueRm = scan.nextInt();
+                list.removeFirst(valueRm);
+                break;
+            case 5:
+                System.out.print("What is the value you want to remove: ");
+                int valueRmAll = scan.nextInt();
+                list.removeAll(valueRmAll);
+                break;
             default:
                 System.out.println("Sorry, invalid choice");
         }
@@ -54,6 +73,8 @@ public class IntegerListTest
         System.out.println("0: Quit");
         System.out.println("1: Create a new list (** do this first!! **)");
         System.out.println("2: Print the list");
+        System.out.println("3: Add element");
+        System.out.println("4: Remove first value");
         System.out.print("\nEnter your choice: ");
     }
 }
