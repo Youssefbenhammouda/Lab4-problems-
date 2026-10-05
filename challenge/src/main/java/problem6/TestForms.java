@@ -8,6 +8,6 @@ public class TestForms {
         figures [ 2 ] = new Square( 5.2 ) ;
         for( int i=0 ; i< figures.length ; i++ )
             System.out.println( figures[i] +" : area = "+
-                            figures[i].getSurface() +"cm2" ) ;
+                            figures[i].getSurface() +" cm2" ) ;
     }
 }
